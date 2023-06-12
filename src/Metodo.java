@@ -137,6 +137,11 @@ public class Metodo {
                     Produto produto = L.get(0);
 
                     Vendas venda = new Vendas(produto, qtdVendida,dateToday);
+                    //calculo do total
+                    double ganho = produto.getValor();
+                    double totGanho = ganho *qtdVendida;
+
+                    Vendas venda = new Vendas(produto, qtdVendida,dateToday,totGanho);
                     listaVendas.add(venda);
                     produto.setQtd(produto.getQtd() - qtdVendida);
 

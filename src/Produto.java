@@ -40,9 +40,6 @@ public class Produto {
         return "Codigo: " + codigo + " | Produto: " + nome+ " | Preço R$" + valor + " | Qtd: " + estoque;
     }
 
-    public String imprimirVenda() {
-        return "Produto: "+nome + " | Preço R$" + valor ;
-    }
 
     public int getQtd() {
         return estoque;
@@ -61,6 +58,6 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "Produto >>" + " Nome: " + nome + " | Prço: R$" + valor;
+        return "Produto >>" + " Nome: " + nome + " | Preço: R$" + valor;
     }
 }

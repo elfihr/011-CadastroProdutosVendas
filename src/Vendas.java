@@ -4,12 +4,11 @@ public class Vendas{
     private String data;
     private double vendaTot;
 
-
-    public Vendas(Produto pdt,int quantidade,String data) {
+    public Vendas(Produto pdt, int quantidade, String data, double vendaTot) {
         this.pdt = pdt;
         this.quantidade = quantidade;
         this.data = data;
-        this.vendaTot =getVendaTot();
+        this.vendaTot = vendaTot;
     }
 
     public double getVendaTot() {
