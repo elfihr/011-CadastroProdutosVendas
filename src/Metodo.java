@@ -131,8 +131,39 @@ public class Metodo {
                     System.out.print("Informe quantas unidades foram vendidas: ");
                     int qtdVendida = leia.nextInt();
 
+                    //DATA
+                    boolean validacao;
+                    String dia,mes,ano;
 
-                    String dateToday = dateForm.format(thisDate);
+                    do{
+                        System.out.print("Dia(ex: 11):");
+                        dia = leia.nextLine();
+                        validacao = dia.matches("[0-9]{2}");
+                        if(!validacao){
+                            System.out.println("invalido");
+                        }
+                    }while(!validacao);
+
+                    do{
+                        System.out.print("Mes(ex: 02):");
+                        mes = leia.nextLine();
+                        validacao = mes.matches("[0-9]{2}");
+                        if(!validacao){
+                            System.out.println("invalido");
+                        }
+                    }while(!validacao);
+
+                    do{
+                        System.out.print("Ano(ex: 1987):");
+                        ano = leia.nextLine();
+                        validacao = ano.matches("[0-9]{4}");
+                        if(!validacao){
+                            System.out.println("invalido");
+                        }
+                    }while(!validacao);
+
+
+                    String dateToday = dia+"/"+mes+"/"+ano;
 
                     Produto produto = L.get(0);
 
